@@ -31,7 +31,7 @@ tags:
  - S3 bucket 
  - AWS
  - hello world
-tag: 1.0.16
+tag: 1.0.17
 type: free # Paid artifacts on the store coming soon
 infrastructure:
   diagram: https://assets.artifakt.io/artifacts/quickstart_aws_terraform.png
