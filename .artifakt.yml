@@ -1,0 +1,68 @@
+# Artifact metadata and configuration
+title: Quickstart AWS Terraform
+tag: 1.0.16
+type: free # Paid artifacts on the store coming soon
+description: Quickstart to show how an artifact works using AWS S3 Bucket
+cloud_provider: aws
+build_engine: terraform
+available_regions:
+  - us-east-1
+  - us-east-2
+  - us-west-1
+  - us-west-2
+  - ca-central-1
+  - eu-central-1
+  - eu-west-1
+  - eu-west-2
+  - eu-west-3
+  - ap-northeast-1
+  - ap-northeast-2
+  - ap-northeast-3
+  - ap-southeast-1
+  - ap-southeast-2
+  - ap-south-1
+  - sa-east-1
+image: https://assets.artifakt.io/artifacts/quickstart-artifact.png
+category: quickstart
+main_language: html_css
+license:
+   code: mit
+   name: MIT
+tags:
+ - quickstart 
+ - S3 bucket 
+ - AWS
+ - hello world
+
+infrastructure:
+  diagram: https://assets.artifakt.io/artifacts/quickstart_aws_terraform.png
+  build_time: 15 #in seconds 
+  cost_estimation:
+    monthly_price: 0.04  #in dollars per month 
+    details: calculated for 5K Get request per month and used space under 1Go in Ireland 
+
+inputs:
+  - 
+    code: bucket_name
+    name: Bucket name
+    description: Choose your bucket name, must be unique and lowercase
+    category: data
+    type: text 
+    default: mylyrikzbuket.1539596557
+    required:  true
+      
+outputs:
+  - 
+    code: endpoint
+    name: Website URL
+    description: Fully qualified website URL 
+    category: url
+
+actions:
+  -
+    code: deploy
+    name: Deploy
+    description: Deploy code to S3
+    category: application
+    engine: shell
+    script: deploy.sh
