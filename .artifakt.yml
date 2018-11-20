@@ -49,6 +49,14 @@ inputs:
     type: text 
     default: mylyrikzbuket.1539596557
     required:  true
+  - 
+    code: useless_variable
+    name: Useless Variable
+    description: It's a useless variable
+    category: data
+    type: text 
+    default: useless_value
+    required:  true
     
 outputs:
   - 
